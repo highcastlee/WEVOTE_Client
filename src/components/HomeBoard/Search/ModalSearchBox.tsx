@@ -2,7 +2,7 @@ import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import React, { useState } from 'react';
 
-import Button from '../../../Common/Button';
+import Button from '../../Common/Button';
 import closeIcon from '@icon/close.svg';
 import Fab from '@material-ui/core/Fab';
 import SearchBox from './SearchBox';

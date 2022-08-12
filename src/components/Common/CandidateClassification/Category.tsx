@@ -2,11 +2,10 @@ import * as React from 'react';
 
 import { useEffect, useRef } from 'react';
 
-import CategoryItem from './CategoryItem';
-import media from '@styles/media';
+import CategoryList from './CategoryList';
 import styled from 'styled-components';
 
-interface ClassificationProps {
+interface CategoryProps {
   getNewMiddleList: (HTMLInputElement: any) => void;
   getNewBottomList: (HTMLInputElement: any) => void;
   handleBottomCurrentIndex: (HTMLInputElement: any) => void;
@@ -16,7 +15,7 @@ interface ClassificationProps {
   currentIndex: { top: number; middle: number; bottom: number };
 }
 
-const ClassificationCategory = ({
+const Category = ({
   getNewMiddleList,
   getNewBottomList,
   handleBottomCurrentIndex,
@@ -24,7 +23,7 @@ const ClassificationCategory = ({
   middleList,
   bottomList,
   currentIndex,
-}: ClassificationProps) => {
+}: CategoryProps) => {
   const middleScrollRef = useRef<HTMLDivElement>(null);
   const bottomScrollRef = useRef<HTMLDivElement>(null);
 
@@ -61,45 +60,30 @@ const ClassificationCategory = ({
   return (
     <>
       <BackgroundBar color="#F6F3FD">
-        <TopCategoryList>
-          {topList.map((item, index) => (
-            <CategoryItem
-              key={index}
-              title={item}
-              onClick={handleMiddleList}
-              isActive={item === topList[currentIndex.top]}
-              isTopActive={item === topList[currentIndex.top]}
-              isTop
-            />
-          ))}
-        </TopCategoryList>
+        <CategoryList
+          categoryList={topList}
+          listPosition={'top'}
+          currentIndex={currentIndex}
+          handleList={handleMiddleList}
+          isTop
+        />
       </BackgroundBar>
       <BackgroundBar ref={middleScrollRef} color="#EAE3FF">
-        <CategoryList>
-          {middleList.map((item, index) => {
-            return (
-              <CategoryItem
-                key={index}
-                title={item}
-                onClick={handleBottomList}
-                isActive={item === middleList[currentIndex.middle]}
-              />
-            );
-          })}
-        </CategoryList>
+        <CategoryList
+          categoryList={middleList}
+          listPosition={'middle'}
+          currentIndex={currentIndex}
+          handleList={handleBottomList}
+        />
       </BackgroundBar>
       {bottomList[currentIndex.bottom] && (
         <BackgroundBar ref={bottomScrollRef} color="#F1ECFF">
-          <CategoryList>
-            {bottomList.map((item, index) => (
-              <CategoryItem
-                key={index}
-                title={item}
-                onClick={handleBottomIndex}
-                isActive={item === bottomList[currentIndex.bottom]}
-              />
-            ))}
-          </CategoryList>
+          <CategoryList
+            categoryList={bottomList}
+            listPosition={'bottom'}
+            currentIndex={currentIndex}
+            handleList={handleBottomIndex}
+          />
         </BackgroundBar>
       )}
     </>
@@ -117,29 +101,4 @@ const BackgroundBar = styled.div`
   }
 `;
 
-const CategoryList = styled.ul`
-  width: ${media.laptop}px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  @media (max-width: ${media.mobileL}px) {
-    flex-wrap: nowrap;
-    width: max-content;
-    margin: 0;
-  }
-`;
-
-const TopCategoryList = styled.ul`
-  max-width: 100%;
-  width: ${media.laptop}px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  @media (max-width: ${media.mobileL}px) {
-    width: 100%;
-  }
-`;
-
-export default ClassificationCategory;
+export default Category;

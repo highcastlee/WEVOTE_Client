@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import styled, { css } from 'styled-components';
 
-import CandidateCard from '../../../Common/CandidateCard';
+import CandidateCard from '@components/Common/CandidateCard';
 import media from '@styles/media';
 import { Team } from 'candidateType';
 import theme from '@styles/theme';

@@ -35,7 +35,7 @@ const useGetCategory = () => {
     setCurrentIndex({ ...currentIndex, middle: index, bottom: 0 });
   };
 
-  const getNewMiddleList = (value) => {
+  const getNewMiddleList = (value: string) => {
     const currentTopIndex = topList.indexOf(value);
     setMiddleList(
       data[currentTopIndex].middle.map((mid) => mid.organizationName)

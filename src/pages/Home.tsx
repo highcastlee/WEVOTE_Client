@@ -1,13 +1,13 @@
 import * as React from 'react';
 
-import Classification from '@components/Home/Classification';
-import HomeBoard from '@components/Home/HomeBoard';
+import CandidateClassification from '@components/Common/CandidateClassification';
+import HomeBoard from '@components/HomeBoard';
 
 const Home = () => {
   return (
     <>
       <HomeBoard />
-      <Classification />
+      <CandidateClassification />
     </>
   );
 };

@@ -21,7 +21,7 @@ const topCategory = {
   major: '학과',
 };
 
-const Classification = (props) => {
+const CandidateClassification = (props) => {
   const classes = useStyles();
   const {
     categoryState,
@@ -146,7 +146,7 @@ const Classification = (props) => {
   );
 };
 
-export default Classification;
+export default CandidateClassification;
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

@@ -25,7 +25,7 @@ interface CandidateArticleProps {
 const emptyCardArr = [Img1, Img2, Img3];
 const emptyDescription = '후보가 등록되어 있지 않습니다.';
 
-export default function CandidateArticle(props: CandidateArticleProps) {
+function Candidate(props: CandidateArticleProps) {
   const { loading, title, teamArr, organizationId, refetch } = props;
   const classes = useStyles();
   const [count, setCount] = useState(0);
@@ -145,3 +145,5 @@ const Article = styled.article`
 const CarouselWrapper = styled.div`
   overflow: hidden;
 `;
+
+export default Candidate;
