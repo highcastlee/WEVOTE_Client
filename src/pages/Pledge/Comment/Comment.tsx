@@ -17,7 +17,7 @@ interface qnaType {
   answer?: boolean;
 }
 
-const Comment = ({ qna, answer }: qnaType) => {
+export function Comment({ qna, answer }: qnaType) {
   const image = answer ? adminProfile : userProfile;
   const name = qna.type === 'question' ? '크루원' : '후보자';
   return (
@@ -32,7 +32,7 @@ const Comment = ({ qna, answer }: qnaType) => {
       </User>
     </QuestionBlock>
   );
-};
+}
 
 Comment.defaultProps = {
   answer: false,
@@ -127,5 +127,3 @@ const CommentText = styled.p`
     font-size: 1.2rem;
   }
 `;
-
-export default Comment;

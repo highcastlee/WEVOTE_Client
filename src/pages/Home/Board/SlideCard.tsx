@@ -13,7 +13,7 @@ interface SlideProps {
   data: Data;
 }
 
-const Slide = ({ data }: SlideProps) => {
+export function SlideCard({ data }: SlideProps) {
   const { name, numOfTeam, type } = data;
 
   return (
@@ -25,9 +25,7 @@ const Slide = ({ data }: SlideProps) => {
       </Article>
     </CardBox>
   );
-};
-
-export default Slide;
+}
 
 const CardBox = styled.div`
   display: inline-block;

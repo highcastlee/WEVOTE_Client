@@ -1,12 +1,12 @@
 import * as React from 'react';
 
 import media from '@styles/media';
-import PledgeCard from './PledgeCard';
+import { PledgeCard } from './PledgeCard';
 import { PromiseArr } from 'candidateType';
 import styled from 'styled-components';
 import theme from '@styles/theme';
 
-const PledgeSection = ({ pledgeArr, slogan }: PromiseArr) => {
+export function PledgeDetail({ pledgeArr, slogan }: PromiseArr) {
   return (
     <Article>
       <PledgeBlock>
@@ -28,7 +28,7 @@ const PledgeSection = ({ pledgeArr, slogan }: PromiseArr) => {
       </PledgeBlock>
     </Article>
   );
-};
+}
 
 const Article = styled.article`
   width: ${media.laptop}px;
@@ -92,5 +92,3 @@ const PledgeTable = styled.div`
   justify-content: space-around;
   width: 100%;
 `;
-
-export default PledgeSection;

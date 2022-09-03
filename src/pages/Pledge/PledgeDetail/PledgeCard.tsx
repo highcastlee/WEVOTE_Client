@@ -5,11 +5,11 @@ import { PromiseType } from 'candidateType';
 import styled from 'styled-components';
 import theme from '@styles/theme';
 
-const PledgeCard = ({
+export function PledgeCard({
   promiseType,
   promiseTitle,
   promiseDetail,
-}: PromiseType) => {
+}: PromiseType) {
   return (
     <CardBlock>
       <BarIcon>l</BarIcon>
@@ -20,7 +20,7 @@ const PledgeCard = ({
       </TextBlock>
     </CardBlock>
   );
-};
+}
 
 const CardBlock = styled.div`
   width: 290px;
@@ -73,5 +73,3 @@ const DetailText = styled.p`
     font-size: 1.4rem;
   }
 `;
-
-export default PledgeCard;

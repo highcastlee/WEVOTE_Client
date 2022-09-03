@@ -8,16 +8,7 @@ import Skeleton from '@material-ui/lab/Skeleton';
 import styled from 'styled-components';
 import useFetch from '@hooks/useFetch';
 
-const initialData = [
-  {
-    id: 0,
-    content: '공지사항 없음',
-    startDate: new Date(),
-    endDate: new Date(),
-  },
-];
-
-const Notice = () => {
+export function Notice() {
   const classes = useStyles();
   const [{ loading, data, error }, fetchData] = useFetch('/api/v1/main/banner');
   const [index, setIndex] = useState<number>(0);
@@ -25,8 +16,7 @@ const Notice = () => {
   useEffect(() => {
     if (!data) return;
     const lastIndex = data.length - 1;
-    let interval;
-    interval = setInterval(() => {
+    const interval = setInterval(() => {
       setIndex(index < lastIndex ? index + 1 : 0);
     }, 5000);
     return () => clearInterval(interval);
@@ -58,9 +48,7 @@ const Notice = () => {
       )}
     </NoticeBoard>
   );
-};
-
-export default Notice;
+}
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

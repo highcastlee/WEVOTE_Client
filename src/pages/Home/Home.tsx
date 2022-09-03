@@ -1,31 +1,31 @@
-import Calendar from './Calendar';
-import InfoCard from './InfoCard';
+import * as React from 'react';
+
+import { Calendar, InfoCardSlide, Notice } from './Board';
+
+import CandidateClassification from '@components/Common/CandidateClassification';
 import media from '@styles/media';
-import Notice from './Notice';
-import React from 'react';
-import Search from './Search';
 import styled from 'styled-components';
 
-const HomeBoard = () => {
+const Home = () => {
   return (
-    <Board>
-      <TitleArea>
-        <Search />
-      </TitleArea>
-      <UserArea>
-        <InfoCard />
-      </UserArea>
-      <NoticeBoard>
-        <Notice />
-      </NoticeBoard>
-      <ImgArea>
-        <Calendar />
-      </ImgArea>
-    </Board>
+    <>
+      <Board>
+        <div>
+          <InfoCardSlide />
+        </div>
+        <div>
+          <Notice />
+        </div>
+        <ImgArea>
+          <Calendar />
+        </ImgArea>
+      </Board>
+      <CandidateClassification />
+    </>
   );
 };
 
-export default HomeBoard;
+export default Home;
 
 const Board = styled.section`
   width: ${media.laptop}px;
@@ -41,12 +41,6 @@ const Board = styled.section`
     grid-template-columns: repeat(1, 1fr);
   }
 `;
-
-const TitleArea = styled.div``;
-
-const UserArea = styled.div``;
-
-const NoticeBoard = styled.div``;
 
 const ImgArea = styled.div`
   grid-column: 2;

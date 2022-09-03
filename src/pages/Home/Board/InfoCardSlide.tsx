@@ -4,35 +4,14 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import media from '@styles/media';
 import Skeleton from '@material-ui/lab/Skeleton';
-import Slide from './Slide';
+import { SlideCard } from './SlideCard';
 import styled from 'styled-components';
 import useFetch from '@hooks/useFetch';
-
-const initialData = [
-  {
-    id: null,
-    name: '미등록',
-    numOfTeam: 0,
-    type: '미정',
-  },
-  {
-    id: null,
-    name: '미등록',
-    numOfTeam: 0,
-    type: '미정',
-  },
-  {
-    id: null,
-    name: '미등록',
-    numOfTeam: 0,
-    type: '미정',
-  },
-];
 
 const slideSize = 204;
 const slidePerPage = 3;
 
-const InfoCard = () => {
+export function InfoCardSlide() {
   const classes = useStyles();
   const [{ loading, data, error }, fetchData] = useFetch(
     '/api/v1/main/election'
@@ -79,7 +58,7 @@ const InfoCard = () => {
               className={classes.card}
             />
           ) : (
-            <Slide data={data[i]} />
+            <SlideCard data={data[i]} />
           )}
         </Link>
       );
@@ -96,9 +75,7 @@ const InfoCard = () => {
       )}
     </Container>
   );
-};
-
-export default InfoCard;
+}
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

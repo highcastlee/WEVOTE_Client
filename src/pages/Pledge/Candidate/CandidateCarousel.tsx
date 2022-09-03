@@ -3,8 +3,8 @@ import * as React from 'react';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 import styled, { css } from 'styled-components';
 
-import CandidateCard from '../../Common/CandidateCard';
-import Carousel from '../../Common/Carousel';
+import CandidateCard from '../../../components/Common/CandidateCard';
+import Carousel from '../../../components/Common/Carousel';
 import media from '@styles/media';
 import { Team } from 'candidateType';
 import theme from '@styles/theme';
@@ -27,12 +27,12 @@ interface styleProps {
 const BoxSize = 360;
 const MobileBoxSize = 80;
 
-const CandidateSection = ({
+export function CandidateCarousel({
   title,
   teamArr,
   current,
   setCurrent,
-}: CandidateArticleProps) => {
+}: CandidateArticleProps) {
   const [count, setCount] = useState(0);
 
   const laptopMargin = (media.laptop - BoxSize * 3) / 6;
@@ -91,9 +91,7 @@ const CandidateSection = ({
       </Article>
     </Background>
   );
-};
-
-export default CandidateSection;
+}
 
 const Background = styled.section`
   background-color: ${theme.Blue};

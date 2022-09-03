@@ -9,7 +9,7 @@ import styled from 'styled-components';
 import { theme } from '@components/Admin/materialStyle';
 import useFetch from '@hooks/useFetch';
 
-const ImgBoard = () => {
+export function Calendar() {
   const classes = useStyles();
   const [{ loading, data, error }, fetchData] = useFetch(
     '/api/v1/main/calendar'
@@ -27,17 +27,15 @@ const ImgBoard = () => {
   }, [data]);
 
   return (
-    <Calendar>
+    <Container>
       {loading ? (
         <Skeleton animation="wave" variant="rect" className={classes.media} />
       ) : (
         <CalendarImg src={image} alt="calendar" onError={handleImgError} />
       )}
-    </Calendar>
+    </Container>
   );
-};
-
-export default ImgBoard;
+}
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -55,7 +53,7 @@ const useStyles = makeStyles(() =>
   })
 );
 
-const Calendar = styled.div`
+const Container = styled.div`
   margin-top: 70px;
   display: flex;
   justify-content: center;

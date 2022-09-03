@@ -1,10 +1,10 @@
 import * as React from 'react';
 
-import Comment from './Comment';
+import { Comment } from './Comment';
 import { qnaArr } from 'candidateType';
 import styled from 'styled-components';
 
-const CommentArticle = ({ qnaArr }: qnaArr) => {
+export function CommentArticle({ qnaArr }: qnaArr) {
   return (
     <Article>
       {qnaArr &&
@@ -18,10 +18,8 @@ const CommentArticle = ({ qnaArr }: qnaArr) => {
         })}
     </Article>
   );
-};
+}
 
 const Article = styled.article`
   width: 100%;
 `;
-
-export default CommentArticle;

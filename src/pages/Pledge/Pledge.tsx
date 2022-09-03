@@ -2,10 +2,10 @@ import * as React from 'react';
 
 import { useCallback, useEffect, useState } from 'react';
 
-import CandidateSection from '@components/Pledge/Candidate/CandidateSection';
-import CommentSection from '@components/Pledge/Comment/CommentSection';
+import { CandidateCarousel } from './Candidate/CandidateCarousel';
+import { CommentSection } from './Comment/CommentSection';
 import Loader from '@components/Common/Loader';
-import PledgeSection from '@components/Pledge/PledgeDetail/PledgeSection';
+import { PledgeDetail } from './PledgeDetail/PledgeDetail';
 import useFetch from '@hooks/useFetch';
 import { useParams } from 'react-router-dom';
 
@@ -31,13 +31,13 @@ const Pledge = () => {
     <>
       {data ? (
         <div ref={pledgePageRef}>
-          <CandidateSection
+          <CandidateCarousel
             title={data.organizationName}
             teamArr={data.Teams}
             current={current}
             setCurrent={setCurrent}
           />
-          <PledgeSection
+          <PledgeDetail
             pledgeArr={data.Teams[current].Promises}
             slogan={data.Teams[current].slogan}
           />

@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import CommentArticle from './CommentArticle';
-import CommentInput from './CommentInput';
+import { CommentArticle } from './CommentArticle';
+import { CommentInput } from './CommentInput';
 import media from '@styles/media';
 import { qnaInfo } from 'candidateType';
 import styled from 'styled-components';
@@ -12,7 +12,7 @@ interface commentType {
   fetchData: () => void;
 }
 
-const CommentSection = ({ qnaArr, teamId, fetchData }: commentType) => {
+export function CommentSection({ qnaArr, teamId, fetchData }: commentType) {
   return (
     <Section>
       <CommentBlock>
@@ -21,7 +21,7 @@ const CommentSection = ({ qnaArr, teamId, fetchData }: commentType) => {
       </CommentBlock>
     </Section>
   );
-};
+}
 
 const Section = styled.section`
   width: ${media.laptop}px;
@@ -49,5 +49,3 @@ const CommentBlock = styled.div`
     min-height: 300px;
   }
 `;
-
-export default CommentSection;

@@ -9,7 +9,7 @@ import { useAlert } from 'react-alert';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
 
-const CommentInput = ({ teamId, fetchData }) => {
+export function CommentInput({ teamId, fetchData }) {
   const [text, setText] = useState('');
   const alert = useAlert();
   const { user } = useSelector((state: storeTypes.sliceState) => ({
@@ -53,7 +53,7 @@ const CommentInput = ({ teamId, fetchData }) => {
       <InputButton type="submit" value="등록" />
     </InputForm>
   );
-};
+}
 
 const InputForm = styled.form`
   display: flex;
@@ -102,5 +102,3 @@ const InputButton = styled.input`
     border-radius: 15px;
   }
 `;
-
-export default CommentInput;
