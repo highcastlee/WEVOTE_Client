@@ -75,9 +75,9 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.css', '.json'],
     alias: {
       '@': path.resolve(__dirname, 'src/'),
-      '@assets': path.resolve(__dirname, 'src/assets'),
-      '@icon': path.resolve(__dirname, 'src/assets/icon'),
-      '@img': path.resolve(__dirname, 'src/assets/img'),
+      '@assets': path.resolve(__dirname, 'public/assets'),
+      '@icon': path.resolve(__dirname, 'public/assets/icon'),
+      '@img': path.resolve(__dirname, 'public/assets/img'),
       '@components': path.resolve(__dirname, 'src/components'),
       '@store': path.resolve(__dirname, 'src/store'),
       '@mocks': path.resolve(__dirname, 'src/mocks'),
