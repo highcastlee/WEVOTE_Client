@@ -85,6 +85,8 @@ module.exports = {
       '@hooks': path.resolve(__dirname, 'src/hooks'),
       '@api': path.resolve(__dirname, 'src/api'),
       '@styles': path.resolve(__dirname, 'src/styles'),
+      '@constants': path.resolve(__dirname, 'src/constants'),
+      '@pages': path.resolve(__dirname, 'src/pages'),
     },
   },
   devtool: 'eval-cheap-source-map', // 번들링된 파일에서 에러 위치 확인

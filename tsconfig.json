@@ -63,7 +63,9 @@
       "@utils/*": ["src/utils/*"],
       "@hooks/*": ["src/hooks/*"],
       "@api/*": ["src/api/*"],
-      "@styles/*": ["src/styles/*"]
+      "@styles/*": ["src/styles/*"],
+      "@constants/*": ["src/constants/*"],
+      "@pages/*": ["src/pages/*"],      
     },
     "typeRoots": [
       "./node_modules/@types",
