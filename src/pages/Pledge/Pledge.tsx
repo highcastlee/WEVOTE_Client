@@ -4,12 +4,12 @@ import { useCallback, useEffect, useState } from 'react';
 
 import { CandidateCarousel } from './Candidate/CandidateCarousel';
 import { CommentSection } from './Comment/CommentSection';
-import Loader from '@components/Common/Loader';
+import Loader from '@components/Loader';
 import { PledgeDetail } from './PledgeDetail/PledgeDetail';
 import useFetch from '@hooks/useFetch';
 import { useParams } from 'react-router-dom';
 
-const Pledge = () => {
+function Pledge() {
   const { id } = useParams<{ id: string }>();
   const [{ loading, data, error }, fetchData] = useFetch(
     `/api/v1/promise/promise-detail/${id}`
@@ -52,6 +52,6 @@ const Pledge = () => {
       )}
     </>
   );
-};
+}
 
 export default Pledge;

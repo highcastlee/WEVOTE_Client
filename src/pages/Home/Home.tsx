@@ -2,20 +2,24 @@ import * as React from 'react';
 
 import { Calendar, InfoCardSlide, Notice } from './Board';
 
-import CandidateClassification from '@components/Common/CandidateClassification';
+import CandidateClassification from '@components/CandidateClassification';
 import media from '@styles/media';
+import Search from './Board/Search/Search';
 import styled from 'styled-components';
 
-const Home = () => {
+export function Home() {
   return (
     <>
       <Board>
-        <div>
+        <section>
+          <Search />
+        </section>
+        <section>
           <InfoCardSlide />
-        </div>
-        <div>
+        </section>
+        <section>
           <Notice />
-        </div>
+        </section>
         <ImgArea>
           <Calendar />
         </ImgArea>
@@ -23,11 +27,9 @@ const Home = () => {
       <CandidateClassification />
     </>
   );
-};
+}
 
-export default Home;
-
-const Board = styled.section`
+const Board = styled.article`
   width: ${media.laptop}px;
   margin: 60px auto;
   display: grid;
@@ -42,7 +44,7 @@ const Board = styled.section`
   }
 `;
 
-const ImgArea = styled.div`
+const ImgArea = styled.section`
   grid-column: 2;
   grid-row: 1 / span 2;
   @media (max-width: ${media.mobileL}px) {

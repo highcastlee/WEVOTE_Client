@@ -6,7 +6,7 @@ import media from '@styles/media';
 import React from 'react';
 import Skeleton from '@material-ui/lab/Skeleton';
 import styled from 'styled-components';
-import { theme } from '@components/Admin/materialStyle';
+import { theme } from '@/pages/Admin/materialStyle';
 import useFetch from '@hooks/useFetch';
 
 export function Calendar() {

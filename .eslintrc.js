@@ -41,6 +41,7 @@ module.exports = {
     'no-unused-vars': 1,
     'prettier/prettier': [2, { endOfLine: 'auto' }],
     'react/jsx-props-no-spreading': 0,
+    '@typescript-eslint/no-var-requires': 0,
     'import/extensions': [
       0,
       'ignorePackages',

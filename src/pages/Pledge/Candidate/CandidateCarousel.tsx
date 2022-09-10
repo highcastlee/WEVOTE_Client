@@ -3,8 +3,8 @@ import * as React from 'react';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 import styled, { css } from 'styled-components';
 
-import CandidateCard from '../../../components/Common/CandidateCard';
-import Carousel from '../../../components/Common/Carousel';
+import CandidateCard from '@components/CandidateCard';
+import Carousel from '@components//Carousel';
 import media from '@styles/media';
 import { Team } from 'candidateType';
 import theme from '@styles/theme';

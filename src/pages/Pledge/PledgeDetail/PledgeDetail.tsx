@@ -11,7 +11,7 @@ export function PledgeDetail({ pledgeArr, slogan }: PromiseArr) {
     <Article>
       <PledgeBlock>
         <InnerBox>
-          <SloganText>"{slogan}"</SloganText>
+          <SloganText>`&quot;`{slogan}`&quot;`</SloganText>
           <PledgeTable>
             {pledgeArr.map((pledge, index) => {
               return (

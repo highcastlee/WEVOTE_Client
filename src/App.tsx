@@ -5,12 +5,12 @@ import { lazy, Suspense } from 'react';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
 import GlobalStyle from '@styles/GlobalStyle';
-import Layout from './components/Common/Layout';
+import Layout from '@/pages/Layout/Layout';
 import storeTypes from 'storeTypes';
 import { useSelector } from 'react-redux';
 
 const Pledge = lazy(() => import('./pages/Pledge/Pledge'));
-const Admin = lazy(() => import('./pages/Admin'));
+const Admin = lazy(() => import('./pages/Admin/Admin'));
 
 const App = () => {
   const { user } = useSelector((state: storeTypes.sliceState) => ({
