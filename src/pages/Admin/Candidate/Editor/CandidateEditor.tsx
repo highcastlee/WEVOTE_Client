@@ -1,4 +1,4 @@
-import CandidateClassification from '@components/CandidateClassification';
+import CandidateClassification from '@components/CandidateClassification/CandidateClassification';
 import Paper from '@material-ui/core/Paper';
 import React from 'react';
 

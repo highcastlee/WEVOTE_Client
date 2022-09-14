@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { Calendar, InfoCardSlide, Notice } from './Board';
 
-import CandidateClassification from '@components/CandidateClassification';
+import CandidateClassification from '@components/CandidateClassification/CandidateClassification';
 import media from '@styles/media';
 import Search from './Board/Search/Search';
 import styled from 'styled-components';

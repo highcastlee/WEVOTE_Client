@@ -38,13 +38,41 @@ function Candidate(props: CandidateArticleProps) {
     return () => setCount(0);
   }, [teamArr]);
 
+  if (loading) {
+    return (
+      <Article>
+        <Skeleton animation="wave" variant="rect" className={classes.title} />
+        <CarouselWrapper>
+          <Carousel
+            isLineBreak
+            count={count}
+            setCount={setCount}
+            maxCount={teamArr.length}
+          >
+            <Skeleton
+              animation="wave"
+              variant="rect"
+              className={classes.card}
+            />
+            <Skeleton
+              animation="wave"
+              variant="rect"
+              className={classes.card}
+            />
+            <Skeleton
+              animation="wave"
+              variant="rect"
+              className={classes.card}
+            />
+          </Carousel>
+        </CarouselWrapper>
+      </Article>
+    );
+  }
+
   return (
     <Article>
-      {loading ? (
-        <Skeleton animation="wave" variant="rect" className={classes.title} />
-      ) : (
-        <CandidateTitle>{title} 후보</CandidateTitle>
-      )}
+      <CandidateTitle>{title} 후보</CandidateTitle>
       <CarouselWrapper>
         <Carousel
           isLineBreak
@@ -52,25 +80,7 @@ function Candidate(props: CandidateArticleProps) {
           setCount={setCount}
           maxCount={teamArr.length}
         >
-          {loading ? (
-            <>
-              <Skeleton
-                animation="wave"
-                variant="rect"
-                className={classes.card}
-              />
-              <Skeleton
-                animation="wave"
-                variant="rect"
-                className={classes.card}
-              />
-              <Skeleton
-                animation="wave"
-                variant="rect"
-                className={classes.card}
-              />
-            </>
-          ) : isEmptyTeamArr ? (
+          {isEmptyTeamArr ? (
             <CardList
               dataArr={emptyCardArr}
               alt={'empty card'}

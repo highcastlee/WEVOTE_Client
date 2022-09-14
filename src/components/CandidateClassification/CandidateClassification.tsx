@@ -5,9 +5,9 @@ import { HasBottomType, HasMiddleType, Team } from 'candidateType';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 
-import Candidate from './Candidate';
+import Candidate from './Candidate/Candidate';
 import CandidateRegister from '@/pages/Admin/Candidate/Register/Register';
-import Category from './Category';
+import Category from './Category/Category';
 import { Modal } from 'react-responsive-modal';
 import Skeleton from '@material-ui/lab/Skeleton';
 import storeTypes from 'storeTypes';
