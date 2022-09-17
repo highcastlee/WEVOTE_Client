@@ -19,8 +19,7 @@
 </div>
 
 ## 📼 Architecture
-  <img src="https://user-images.githubusercontent.com/62092665/190854246-f1998014-ef8e-417c-a076-8457766642d0.jpg" alt="architecture" style="width: 100%;" />
-
+  <img src="https://user-images.githubusercontent.com/62092665/190855536-1a091b12-a838-4315-b5b7-c9c4a3684c77.jpg" alt="architecture" style="width: 100%;" />
 
 
 ## 📼 Preview
