@@ -19,7 +19,8 @@
 </div>
 
 ## 📼 Architecture
-  <img src="https://user-images.githubusercontent.com/62092665/171193631-beb00d4f-d4c2-4290-bf14-15e6a6392ebc.jpg" alt="architecture" style="width: 500px;" />
+  <img src="https://user-images.githubusercontent.com/62092665/190854246-f1998014-ef8e-417c-a076-8457766642d0.jpg" alt="architecture" style="width: 100%;" />
+
 
 
 ## 📼 Preview
@@ -49,12 +50,6 @@
 - 선거 공지사항 및 안내 페이지
 - 로컬 회원가입/로그인
 - 관리자 페이지 모든 선거 정보 관련 CRUD 기능
-
-
-## 🌐 Supported Browsers
-|<img width="20" src="https://simpleicons.org/icons/internetexplorer.svg" alt="IE" />|<img width="20" src="https://simpleicons.org/icons/googlechrome.svg" alt="Chrome" />|<img width="20" src="https://simpleicons.org/icons/firefoxbrowser.svg" alt="Firefox" />|<img width="20" src="https://simpleicons.org/icons/safari.svg" alt="Safari" />|
-|:---:|:---:|:---:|:---:|
-|11+ |last 2 versions|last 2 versions|last 2 versions|
 
 
 ## 📝 Feedback
